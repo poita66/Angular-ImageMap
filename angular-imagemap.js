@@ -7,11 +7,11 @@ angular.module('imagemap', []).directive('imageMap', function () {
             mapHtml: "=",
             getAreaClick: "&areaClick"
         },
-        template: '<div id="imageMapDiv"></div><img usemap="#Map" src="{{mapImageUrl}}" />',
+        template: '<div></div><img usemap="#Map" src="{{mapImageUrl}}" />',
         link: function (scope, elem) {
             scope.$watch('mapHtml', function () {
                 if (angular.isDefined(scope.mapHtml)) {
-                    var map = $('#imageMapDiv', elem[0]).html(scope.mapHtml).find('map');
+                    var map = $('div', elem[0]).html(scope.mapHtml).find('map');
 
                     map.attr('name', 'Map');
                     map.find('area').each(function (index, elem) {
