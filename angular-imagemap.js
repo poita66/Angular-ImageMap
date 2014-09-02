@@ -1,5 +1,5 @@
 'use strict';
-angular.module('imagemap', []).directive('imageMap', function () {
+angular.module('imageMap', []).directive('imageMap', function () {
     return {
         restrict: 'E',
         scope: {
