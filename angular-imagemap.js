@@ -21,6 +21,12 @@ angular.module('imagemap', []).directive('imageMap', function () {
                             event.preventDefault();
                         });
                     });
+                    if (angular.isDefined($.fn.rwdImageMaps)) {
+                        var img = $('img', elem[0]);
+                        img.rwdImageMaps();
+                        img.css('width', '100%');
+                        img.css('height', '100%');
+                    }
                 }
             });
         }
