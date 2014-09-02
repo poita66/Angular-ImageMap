@@ -25,7 +25,6 @@ angular.module('imagemap', []).directive('imageMap', function () {
                         var img = $('img', elem[0]);
                         img.rwdImageMaps();
                         img.css('width', '100%');
-                        img.css('height', '100%');
                     }
                 }
             });
